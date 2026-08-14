@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO & Social Sharing Meta Tags -->
+    <title>DevPortfolio | Git & GitHub Workshop Template</title>
+    <meta name="description" content="A modern, high-aesthetic developer portfolio built with HTML, CSS, and JS. Designed for Git & GitHub workshops and deployed on GitHub Pages.">
+    <meta name="author" content="Workshop Participant">
+
+    <!-- Google Fonts: Plus Jakarta Sans for UI & Fira Code for Terminal/Code -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ========================================== -->
+    <!-- HEADER & NAVIGATION                        -->
+    <!-- ========================================== -->
+    <header class="navbar-header" id="navbar">
+        <div class="container nav-container">
+            <!-- WORKSHOP CUSTOMIZATION: Change your brand/logo name here -->
+            <a href="#hero" class="nav-brand">
+                <span class="brand-code">&lt;</span><span class="brand-name">AlexDev</span><span class="brand-code"> /&gt;</span>
+            </a>
+
+            <!-- Desktop Navigation Menu -->
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#git-workshop" class="nav-link workshop-badge-link">Git Workshop 🚀</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Nav Actions: Dark/Light Mode & Mobile Hamburger Menu -->
+            <div class="nav-actions">
+                <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Dark/Light Theme">
+                    <span class="theme-icon sun-icon">☀️</span>
+                    <span class="theme-icon moon-icon">🌙</span>
+                </button>
+
+                <button id="mobileMenuBtn" class="hamburger-btn" aria-label="Toggle Navigation Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========================================== -->
+        <!-- HERO SECTION                               -->
+        <!-- ========================================== -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="pulse-dot"></span> Available for Open Source & Collaboration
+                    </div>
+
+                    <!-- WORKSHOP CUSTOMIZATION: Replace with your name -->
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Yogini Patil</span> 👋
+                    </h1>
+
+                    <!-- Dynamic Typing Text Subtitle -->
+                    <h2 class="hero-subtitle">
+                        I build <span id="typedText" class="typed-highlight"></span><span class="cursor">|</span>
+                    </h2>
+
+                    <p class="hero-description">
+                        Passionate software developer crafting clean, accessible web interfaces. 
+                        This portfolio serves as my interactive showcase and live workspace for the <strong>Git & GitHub Workshop</strong>!
+                    </p>
+
+                    <!-- Tech Badges -->
+                    <div class="tech-stack-pills">
+                        <span class="pill"><i class="icon">⚡</i> HTML5</span>
+                        <span class="pill"><i class="icon">🎨</i> CSS3</span>
+                        <span class="pill"><i class="icon">🚀</i> JavaScript</span>
+                        <span class="pill git-pill"><i class="icon">🐙</i> Git & GitHub</span>
+                        <span class="pill pages-pill"><i class="icon">🌐</i> GitHub Pages</span>
+                    </div>
+
+                    <!-- CTA Action Buttons -->
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>View Projects</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="#git-workshop" class="btn btn-secondary">
+                            <span>Git CLI Demo</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 17l6-6-6-6M12 19h8"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic / Avatar -->
+                <div class="hero-visual">
+                    <div class="avatar-glow"></div>
+                    <div class="avatar-card">
+                        <img src="assets/avatar.svg" alt="Developer Avatar" class="avatar-img">
+                        <div class="floating-badge badge-top-right">
+                            <span class="badge-icon">🌿</span>
+                            <span class="badge-text">branch: main</span>
+                        </div>
+                        <div class="floating-badge badge-bottom-left">
+                            <span class="badge-icon">✨</span>
+                            <span class="badge-text">commit: verified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#about" class="scroll-down-indicator" aria-label="Scroll to About Section">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 13l5 5 5-5M12 6v12"/></svg>
+            </a>
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- ABOUT ME SECTION                           -->
+        <!-- ========================================== -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Getting to know me</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card glass-card">
+                        <h3 class="about-heading">My Journey</h3>
+                        <p class="about-text">
+                            Hello! I am a web developer with a passion for building intuitive, high-performance web applications. I love solving complex technical challenges and sharing knowledge with the developer community.
+                        </p>
+                        <p class="about-text">
+                            This web portfolio was engineered during a <strong>Git & GitHub Workshop</strong> to demonstrate essential version control concepts—including repository initialization, feature branching, pull requests, and continuous deployment via GitHub Pages.
+                        </p>
+
+                        <!-- Key Highlights -->
+                        <div class="highlights-grid">
+                            <div class="highlight-item">
+                                <span class="highlight-num" data-count="15">15+</span>
+                                <span class="highlight-label">Git Repositories</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-num" data-count="500">500+</span>
+                                <span class="highlight-label">GitHub Commits</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-num" data-count="100">100%</span>
+                                <span class="highlight-label">GitHub Pages Ready</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience Timeline -->
+                    <div class="timeline-card glass-card">
+                        <h3 class="about-heading">Milestones & Learning</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">Current</span>
+                                    <h4>Git & GitHub Workshop Facilitator / Student</h4>
+                                    <p>Building open-source projects, mastering Git workflows, and hosting static sites on GitHub Pages.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">2025</span>
+                                    <h4>Frontend Web Developer</h4>
+                                    <p>Crafting accessible design systems and responsive user experiences using semantic HTML, vanilla CSS, and JavaScript.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">2024</span>
+                                    <h4>First Open Source Contribution</h4>
+                                    <p>Submitted first Pull Request on GitHub, resolved issue tickets, and learned collaborative version control.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- SKILLS SECTION                             -->
+        <!-- ========================================== -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Tech Stack & Expertise</span>
+                    <h2 class="section-title">Skills & Capabilities</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Category 1: Languages & Core -->
+                    <div class="skill-category-card glass-card">
+                        <div class="category-header">
+                            <span class="category-icon">🌐</span>
+                            <h3>Frontend Core</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>HTML5 & Semantic Markup</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>CSS3, Flexbox & CSS Grid</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Vanilla JavaScript (ES6+)</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 2: Version Control & Tools -->
+                    <div class="skill-category-card glass-card">
+                        <div class="category-header">
+                            <span class="category-icon">🐙</span>
+                            <h3>Git & Dev Tools</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Git CLI & Branching Models</span>
+                                    <span class="skill-percentage">92%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 92%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>GitHub Flow & Pull Requests</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 88%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>GitHub Pages Deployment</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category 3: Design & Best Practices -->
+                    <div class="skill-category-card glass-card">
+                        <div class="category-header">
+                            <span class="category-icon">✨</span>
+                            <h3>UI/UX & Best Practices</h3>
+                        </div>
+                        <div class="skill-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Responsive Web Design</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Web Accessibility (a11y)</span>
+                                    <span class="skill-percentage">82%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 82%;"></div></div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Performance Optimization</span>
+                                    <span class="skill-percentage">86%</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-progress" style="width: 86%;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- PROJECTS SECTION                           -->
+        <!-- ========================================== -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Featured Works</span>
+                    <h2 class="section-title">Projects Portfolio</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <!-- Project Filter Buttons -->
+                <div class="project-filters text-center">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="web">Web Apps</button>
+                    <button class="filter-btn" data-filter="git">Git Tools</button>
+                    <button class="filter-btn" data-filter="workshop">Workshop Demos</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="projects-grid" id="projectsGrid">
+
+                    <!-- Project Card 1 -->
+                    <article class="project-card glass-card" data-category="git workshop">
+                        <div class="project-img-wrapper">
+                            <div class="project-img-placeholder git-bg">
+                                <span class="placeholder-icon">🌿</span>
+                            </div>
+                            <span class="project-badge">Featured</span>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">Git</span>
+                                <span class="tag">HTML/CSS</span>
+                                <span class="tag">GitHub Pages</span>
+                            </div>
+                            <h3 class="project-title">Git & GitHub Workshop Portfolio</h3>
+                            <p class="project-description">
+                                A clean, responsive portfolio repository built specifically for version control workshops and rapid deployment to GitHub Pages.
+                            </p>
+                            <div class="project-footer">
+                                <button class="btn-text open-modal-btn" data-project="1">Details &amp; Code</button>
+                                <div class="project-links">
+                                    <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub Repo">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                    </a>
+                                    <a href="#hero" aria-label="Live Demo">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 2 -->
+                    <article class="project-card glass-card" data-category="git web">
+                        <div class="project-img-wrapper">
+                            <div class="project-img-placeholder terminal-bg">
+                                <span class="placeholder-icon">💻</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">Git CLI</span>
+                                <span class="tag">Interactive</span>
+                            </div>
+                            <h3 class="project-title">Interactive Git Command Visualizer</h3>
+                            <p class="project-description">
+                                A browser-based interactive terminal that visually demonstrates Git commit graphs, branch merges, and stashes in real time.
+                            </p>
+                            <div class="project-footer">
+                                <button class="btn-text open-modal-btn" data-project="2">Details &amp; Code</button>
+                                <div class="project-links">
+                                    <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub Repo">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                    </a>
+                                    <a href="#git-workshop" aria-label="Live Demo">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 3 -->
+                    <article class="project-card glass-card" data-category="web">
+                        <div class="project-img-wrapper">
+                            <div class="project-img-placeholder markdown-bg">
+                                <span class="placeholder-icon">📝</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">Vanilla JS</span>
+                                <span class="tag">Markdown</span>
+                            </div>
+                            <h3 class="project-title">Markdown Live Preview Editor</h3>
+                            <p class="project-description">
+                                Instant side-by-side Markdown renderer for crafting crisp GitHub `README.md` documentation files with custom theme support.
+                            </p>
+                            <div class="project-footer">
+                                <button class="btn-text open-modal-btn" data-project="3">Details &amp; Code</button>
+                                <div class="project-links">
+                                    <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub Repo">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                    </a>
+                                    <a href="#" aria-label="Live Demo">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 4 -->
+                    <article class="project-card glass-card" data-category="workshop web">
+                        <div class="project-img-wrapper">
+                            <div class="project-img-placeholder kanban-bg">
+                                <span class="placeholder-icon">📊</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="tag">JavaScript</span>
+                                <span class="tag">LocalStorage</span>
+                                <span class="tag">Kanban</span>
+                            </div>
+                            <h3 class="project-title">TaskFlow Minimal Kanban Board</h3>
+                            <p class="project-description">
+                                Drag-and-drop task management tool for agile developer workflows and Git branch task tracking.
+                            </p>
+                            <div class="project-footer">
+                                <button class="btn-text open-modal-btn" data-project="4">Details &amp; Code</button>
+                                <div class="project-links">
+                                    <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub Repo">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                    </a>
+                                    <a href="#" aria-label="Live Demo">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- INTERACTIVE GIT WORKSHOP SECTION           -->
+        <!-- ========================================== -->
+        <section id="git-workshop" class="section workshop-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Interactive Workshop Suite</span>
+                    <h2 class="section-title">Git &amp; GitHub Command Playground</h2>
+                    <p class="section-subtitle">
+                        Test core Git commands right inside this browser terminal! Perfect for workshop demonstrations and quick revision.
+                    </p>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="workshop-wrapper glass-card">
+                    <!-- Terminal Window Header -->
+                    <div class="terminal-header">
+                        <div class="terminal-controls">
+                            <span class="control close"></span>
+                            <span class="control minimize"></span>
+                            <span class="control maximize"></span>
+                        </div>
+                        <div class="terminal-title">bash - git-workshop@github-pages: ~/portfolio</div>
+                        <div class="terminal-status"><span class="status-dot"></span> Interactive</div>
+                    </div>
+
+                    <!-- Quick Command Chips for Attendees -->
+                    <div class="command-chips-bar">
+                        <span class="chips-label">Quick Commands:</span>
+                        <button class="chip-btn" data-cmd="git init">git init</button>
+                        <button class="chip-btn" data-cmd="git status">git status</button>
+                        <button class="chip-btn" data-cmd="git checkout -b feature/my-bio">git checkout -b feature</button>
+                        <button class="chip-btn" data-cmd="git add .">git add .</button>
+                        <button class="chip-btn" data-cmd="git commit -m &quot;Customize portfolio bio&quot;">git commit</button>
+                        <button class="chip-btn" data-cmd="git push origin main">git push</button>
+                        <button class="chip-btn" data-cmd="git help">git help</button>
+                        <button class="chip-btn clear-btn" data-cmd="clear">clear</button>
+                    </div>
+
+                    <!-- Terminal Output Container -->
+                    <div class="terminal-body" id="terminalOutput">
+                        <div class="term-line welcome-line">
+                            <span class="term-prompt">workshop@git-pages:~$</span> Welcome to the Interactive Git Workshop Terminal v1.0!
+                        </div>
+                        <div class="term-line help-line">
+                            Type <span class="term-highlight">git help</span> or click any quick command button above to execute simulated commands.
+                        </div>
+                    </div>
+
+                    <!-- Terminal Input Line -->
+                    <div class="terminal-input-bar">
+                        <span class="term-prompt">workshop@git-pages:~$</span>
+                        <input type="text" id="terminalInput" placeholder="Type a Git command (e.g. git status)..." autocomplete="off" spellcheck="false">
+                        <button id="termSubmitBtn" class="term-send-btn">Run</button>
+                    </div>
+                </div>
+
+                <!-- Step by Step Instructions Card for Workshop -->
+                <div class="workshop-steps-grid">
+                    <div class="step-card glass-card">
+                        <div class="step-num">01</div>
+                        <h3>Fork &amp; Clone</h3>
+                        <p>Fork this repository on GitHub, then run <code>git clone &lt;your-repo-url&gt;</code> to download the files to your machine.</p>
+                    </div>
+
+                    <div class="step-card glass-card">
+                        <div class="step-num">02</div>
+                        <h3>Create a Branch</h3>
+                        <p>Keep <code>main</code> clean! Create your feature branch using <code>git checkout -b feature/my-portfolio</code>.</p>
+                    </div>
+
+                    <div class="step-card glass-card">
+                        <div class="step-num">03</div>
+                        <h3>Customize &amp; Commit</h3>
+                        <p>Edit your name, bio &amp; links in <code>index.html</code>, stage changes with <code>git add .</code> and commit!</p>
+                    </div>
+
+                    <div class="step-card glass-card">
+                        <div class="step-num">04</div>
+                        <h3>Deploy Pages</h3>
+                        <p>Push to GitHub and enable <strong>GitHub Pages</strong> under Settings &gt; Pages to publish your portfolio live!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ========================================== -->
+        <!-- CONTACT SECTION                            -->
+        <!-- ========================================== -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tag">Let's Connect</span>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Information Cards -->
+                    <div class="contact-info-wrapper">
+                        <div class="info-card glass-card">
+                            <div class="info-icon">📧</div>
+                            <div class="info-content">
+                                <h4>Email Me</h4>
+                                <a href="mailto:alex.rivera.dev@example.com">alex.rivera.dev@example.com</a>
+                            </div>
+                        </div>
+
+                        <div class="info-card glass-card">
+                            <div class="info-icon">🐙</div>
+                            <div class="info-content">
+                                <h4>GitHub Profile</h4>
+                                <a href="https://github.com" target="_blank" rel="noopener">github.com/alexrivera-dev</a>
+                            </div>
+                        </div>
+
+                        <div class="info-card glass-card">
+                            <div class="info-icon">💼</div>
+                            <div class="info-content">
+                                <h4>LinkedIn</h4>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener">linkedin.com/in/alexrivera-dev</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper glass-card">
+                        <form id="contactForm" novalidate>
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+                                <span class="error-msg" id="nameError">Please enter your name.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+                                <span class="error-msg" id="emailError">Please enter a valid email address.</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Hello! I loved your portfolio from the Git Workshop..." required></textarea>
+                                <span class="error-msg" id="messageError">Please enter your message.</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+                                <span>Send Message</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                            </button>
+
+                            <!-- Alert Box -->
+                            <div id="formAlert" class="form-alert" hidden></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- ========================================== -->
+    <!-- FOOTER                                     -->
+    <!-- ========================================== -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#hero" class="brand-link">
+                    <span class="brand-code">&lt;</span>AlexDev<span class="brand-code"> /&gt;</span>
+                </a>
+                <p>Built with pure HTML, CSS &amp; JS for Git &amp; GitHub Workshop demonstrations.</p>
+            </div>
+
+            <div class="footer-badge-wrapper">
+                <span class="gh-pages-status-badge">
+                    <span class="status-indicator"></span> GitHub Pages Verified
+                </span>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Alex Rivera. Released under the MIT License.</p>
+                <a href="#hero" class="back-to-top" id="backToTop" aria-label="Back to top of page">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ========================================== -->
+    <!-- PROJECT DETAILS MODAL DIALOG               -->
+    <!-- ========================================== -->
+    <div id="projectModal" class="modal-overlay" hidden>
+        <div class="modal-card glass-card">
+            <button id="closeModalBtn" class="modal-close-btn" aria-label="Close modal">&times;</button>
+            <div class="modal-header">
+                <h3 id="modalTitle">Project Title</h3>
+                <div id="modalTags" class="project-tags"></div>
+            </div>
+            <div class="modal-body">
+                <p id="modalDescription">Detailed description of the selected project...</p>
+                <div class="modal-git-snippet">
+                    <h4>Git Workshop Workflow for this project:</h4>
+                    <pre><code id="modalGitCode">git clone https://github.com/user/repo.git
+git checkout -b feature/enhancement
+git commit -m "Added new features"
+git push origin feature/enhancement</code></pre>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a id="modalRepoLink" href="https://github.com" target="_blank" rel="noopener" class="btn btn-secondary">View GitHub Repo</a>
+                <a id="modalDemoLink" href="#" class="btn btn-primary">Live Demo</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript Main Script -->
+    <script src="js/main.js"></script>
+</body>
+</html>

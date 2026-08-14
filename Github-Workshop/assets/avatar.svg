@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#311042" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <!-- Background Circle -->
+  <circle cx="100" cy="100" r="95" fill="url(#bgGrad)" stroke="url(#avatarGrad)" stroke-width="4"/>
+  
+  <!-- Glowing Orbit lines -->
+  <circle cx="100" cy="100" r="75" fill="none" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="6,6" opacity="0.6"/>
+  
+  <!-- Developer Silhouette / Avatar Icon -->
+  <g transform="translate(100, 95)" filter="url(#glow)">
+    <!-- Head & Headphones -->
+    <circle cx="0" cy="-25" r="24" fill="url(#avatarGrad)"/>
+    <path d="M -26,-28 A 28,28 0 0,1 26,-28" fill="none" stroke="#e0e7ff" stroke-width="4" stroke-linecap="round"/>
+    <rect x="-29" y="-32" width="7" height="14" rx="3" fill="#e0e7ff"/>
+    <rect x="22" y="-32" width="7" height="14" rx="3" fill="#e0e7ff"/>
+
+    <!-- Code Glasses -->
+    <rect x="-16" y="-30" width="13" height="9" rx="2" fill="#1e1b4b" stroke="#e0e7ff" stroke-width="2"/>
+    <rect x="3" y="-30" width="13" height="9" rx="2" fill="#1e1b4b" stroke="#e0e7ff" stroke-width="2"/>
+    <line x1="-3" y1="-26" x2="3" y2="-26" stroke="#e0e7ff" stroke-width="2"/>
+
+    <!-- Smile -->
+    <path d="M -8,-12 Q 0,-6 8,-12" fill="none" stroke="#e0e7ff" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Body / Shoulders -->
+    <path d="M -42,35 C -40,8 -25,5 0,5 C 25,5 40,8 42,35 Z" fill="url(#avatarGrad)"/>
+    <!-- Hoodie V-neck detail -->
+    <polygon points="0,5 -10,22 10,22" fill="#1e1b4b"/>
+  </g>
+
+  <!-- Git Node Accents -->
+  <circle cx="45" cy="45" r="7" fill="#f05032"/>
+  <circle cx="155" cy="45" r="7" fill="#6366f1"/>
+  <circle cx="160" cy="145" r="7" fill="#ec4899"/>
+  <path d="M 45,45 Q 100,20 155,45" fill="none" stroke="#f05032" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.5"/>
+</svg>
